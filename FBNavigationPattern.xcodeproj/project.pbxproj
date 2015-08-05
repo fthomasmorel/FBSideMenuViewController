@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		F55740441B6B9A0700DD5322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55740431B6B9A0700DD5322 /* AppDelegate.swift */; };
-		F55740461B6B9A0700DD5322 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55740451B6B9A0700DD5322 /* ViewController.swift */; };
 		F55740491B6B9A0700DD5322 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55740471B6B9A0700DD5322 /* Main.storyboard */; };
 		F557404B1B6B9A0700DD5322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F557404A1B6B9A0700DD5322 /* Assets.xcassets */; };
 		F557404E1B6B9A0700DD5322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F557404C1B6B9A0700DD5322 /* LaunchScreen.storyboard */; };
+		F55740561B6B9ABC00DD5322 /* FBSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55740551B6B9ABC00DD5322 /* FBSideMenuViewController.swift */; };
+		F580F8F71B6F5AF400DA3C22 /* FBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580F8F61B6F5AF400DA3C22 /* FBNavigationController.swift */; };
+		F58621A81B70BC0A004DAFEF /* FBTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F58621A71B70BC0A004DAFEF /* FBTableViewCell.xib */; };
+		F58621AA1B70BC26004DAFEF /* FBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58621A91B70BC26004DAFEF /* FBTableViewCell.swift */; };
+		F5BE8ED31B6FC29A0008D9A5 /* FBSideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5BE8ED21B6FC29A0008D9A5 /* FBSideMenuViewController.xib */; };
+		F5BE8ED51B70A9500008D9A5 /* FBNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5BE8ED41B70A9500008D9A5 /* FBNavigationController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F55740401B6B9A0700DD5322 /* FBNavigationPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBNavigationPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55740431B6B9A0700DD5322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F55740451B6B9A0700DD5322 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F55740481B6B9A0700DD5322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F557404A1B6B9A0700DD5322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F557404D1B6B9A0700DD5322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F557404F1B6B9A0700DD5322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F55740551B6B9ABC00DD5322 /* FBSideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSideMenuViewController.swift; sourceTree = "<group>"; };
+		F580F8F61B6F5AF400DA3C22 /* FBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBNavigationController.swift; sourceTree = "<group>"; };
+		F58621A71B70BC0A004DAFEF /* FBTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBTableViewCell.xib; sourceTree = "<group>"; };
+		F58621A91B70BC26004DAFEF /* FBTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBTableViewCell.swift; sourceTree = "<group>"; };
+		F5BE8ED21B6FC29A0008D9A5 /* FBSideMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBSideMenuViewController.xib; sourceTree = "<group>"; };
+		F5BE8ED41B70A9500008D9A5 /* FBNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBNavigationController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,27 @@
 		F55740421B6B9A0700DD5322 /* FBNavigationPattern */ = {
 			isa = PBXGroup;
 			children = (
+				F591BA5D1B70E40E00A1CF8C /* Pod */,
 				F55740431B6B9A0700DD5322 /* AppDelegate.swift */,
-				F55740451B6B9A0700DD5322 /* ViewController.swift */,
 				F55740471B6B9A0700DD5322 /* Main.storyboard */,
 				F557404A1B6B9A0700DD5322 /* Assets.xcassets */,
 				F557404C1B6B9A0700DD5322 /* LaunchScreen.storyboard */,
 				F557404F1B6B9A0700DD5322 /* Info.plist */,
 			);
 			path = FBNavigationPattern;
+			sourceTree = "<group>";
+		};
+		F591BA5D1B70E40E00A1CF8C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F5BE8ED21B6FC29A0008D9A5 /* FBSideMenuViewController.xib */,
+				F58621A71B70BC0A004DAFEF /* FBTableViewCell.xib */,
+				F5BE8ED41B70A9500008D9A5 /* FBNavigationController.xib */,
+				F58621A91B70BC26004DAFEF /* FBTableViewCell.swift */,
+				F580F8F61B6F5AF400DA3C22 /* FBNavigationController.swift */,
+				F55740551B6B9ABC00DD5322 /* FBSideMenuViewController.swift */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +146,10 @@
 			files = (
 				F557404E1B6B9A0700DD5322 /* LaunchScreen.storyboard in Resources */,
 				F557404B1B6B9A0700DD5322 /* Assets.xcassets in Resources */,
+				F5BE8ED51B70A9500008D9A5 /* FBNavigationController.xib in Resources */,
+				F5BE8ED31B6FC29A0008D9A5 /* FBSideMenuViewController.xib in Resources */,
 				F55740491B6B9A0700DD5322 /* Main.storyboard in Resources */,
+				F58621A81B70BC0A004DAFEF /* FBTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55740461B6B9A0700DD5322 /* ViewController.swift in Sources */,
+				F580F8F71B6F5AF400DA3C22 /* FBNavigationController.swift in Sources */,
+				F58621AA1B70BC26004DAFEF /* FBTableViewCell.swift in Sources */,
 				F55740441B6B9A0700DD5322 /* AppDelegate.swift in Sources */,
+				F55740561B6B9ABC00DD5322 /* FBSideMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,9 +274,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FBNavigationPattern/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thomasmorel.florent.FBNavigationPattern;
+				PRODUCT_BUNDLE_IDENTIFIER = FBNavigationPattern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -257,9 +289,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FBNavigationPattern/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thomasmorel.florent.FBNavigationPattern;
+				PRODUCT_BUNDLE_IDENTIFIER = FBNavigationPattern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -283,6 +319,7 @@
 				F55740541B6B9A0700DD5322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
