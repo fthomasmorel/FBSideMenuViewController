@@ -18,7 +18,7 @@ protocol FBMenuDelegate{
 
 //MARK: - FBNavigationController Class
 
-class FBNavigationController:UINavigationController{
+public class FBNavigationController:UINavigationController{
     
     
     //MARK: - Attributes
@@ -45,7 +45,7 @@ class FBNavigationController:UINavigationController{
     
     //MARK: - Init
     
-    init(numberOfItem number:Int, withMaxLimit limit:CGFloat, andMode mode:FBSideMenuMode){
+    public init(numberOfItem number:Int, withMaxLimit limit:CGFloat, andMode mode:FBSideMenuMode){
         self.currentIndex = 0
         self.numberOfItems = number
         self.kLimit = CGFloat(Double(limit)*2.0/M_PI)
@@ -55,13 +55,13 @@ class FBNavigationController:UINavigationController{
         super.init(nibName: "FBNavigationController", bundle: nil)
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     //MARK: - Override
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "handlePan:"))
         self.setNavigationBarHidden(true, animated: false)

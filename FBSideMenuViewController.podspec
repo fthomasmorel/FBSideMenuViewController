@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
+  s.resources = 'FBNavigationPattern/Pod/*'
 
   s.source_files = 'FBNavigationPattern/Pod/*'
 

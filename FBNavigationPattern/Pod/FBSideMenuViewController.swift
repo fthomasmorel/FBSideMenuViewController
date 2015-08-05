@@ -11,14 +11,14 @@ import UIKit
 
 //MARK: - Enum
 
-enum FBSideMenuMode:Int{
+public enum FBSideMenuMode:Int{
     case SwipeToReach
     case SwipeFromScratch
 }
 
 //MARK: - FBSideMenuViewController Class
 
-class FBSideMenuViewController: UIViewController, FBMenuDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate{
+public class FBSideMenuViewController: UIViewController, FBMenuDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate{
         
     //MARK: - Attributes
     
@@ -27,13 +27,13 @@ class FBSideMenuViewController: UIViewController, FBMenuDelegate, UINavigationCo
     private var viewControllers:[UIViewController]!
     private var animator:UIDynamicAnimator!
     
-    var navigationContainer:FBNavigationController!
-    var pictoAnimation:((desactive:UIImageView?, active:UIImageView?, index:Int) -> Void)?
+    public var navigationContainer:FBNavigationController!
+    public var pictoAnimation:((desactive:UIImageView?, active:UIImageView?, index:Int) -> Void)?
     
     
     //MARK: - Init
     
-    init(viewsControllers:[UIViewController], withImages images:[UIImage], forLimit limit:CGFloat, withMode mode:FBSideMenuMode){
+    public init(viewsControllers:[UIViewController], withImages images:[UIImage], forLimit limit:CGFloat, withMode mode:FBSideMenuMode){
         self.images = images
         self.viewControllers = viewsControllers
         super.init(nibName: "FBSideMenuViewController", bundle: nil)
@@ -42,28 +42,28 @@ class FBSideMenuViewController: UIViewController, FBMenuDelegate, UINavigationCo
         self.navigationContainer.delegate = self
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     
     //MARK: - Override
     
-    override func viewWillAppear(animated: Bool) {
+    override public func viewWillAppear(animated: Bool) {
         self.tableView.backgroundColor = self.view.backgroundColor
         self.view.addSubview(navigationContainer.view)
         self.addChildViewController(navigationContainer)
         self.navigationContainer.view.addSubview(viewControllers.first!.view)
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.registerNib(UINib(nibName: "FBTableViewCell", bundle: nil), forCellReuseIdentifier: kFBCellIdentifier)
     }
     
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -120,14 +120,14 @@ class FBSideMenuViewController: UIViewController, FBMenuDelegate, UINavigationCo
     
     //MARK: - UINavigationControllerDelegate
     
-    func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
+    public func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
         let gesture = UIPanGestureRecognizer(target: self.navigationContainer, action: "handlePan:")
         viewController.view.addGestureRecognizer(gesture)
     }
     
     //MARK: - UITableViewDataSource
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:FBTableViewCell!
         if let tmp = tableView.dequeueReusableCellWithIdentifier(kFBCellIdentifier) as? FBTableViewCell{
             cell = tmp
@@ -147,14 +147,14 @@ class FBSideMenuViewController: UIViewController, FBMenuDelegate, UINavigationCo
         return cell
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.images.count
     }
     
     
     //MARK: - UITableViewDelegate
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
     }
 
