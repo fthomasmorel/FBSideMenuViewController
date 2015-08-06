@@ -3,7 +3,7 @@ FBSideMenuViewController is a brand new way to interact with your side menu! The
 
 ![alternate text](https://d13yacurqjgara.cloudfront.net/users/374035/screenshots/1897399/navigation.gif)
 
-Now you just have to pull the side menu till you selected the item you want. The more you pull the deeper item you'll have.
+Now you just have to pull the side menu till you selected the item you want. The more you pull the deeper item you'll have. Just release to select the item.
 
 This is cool and much faster than pull off the menu and touch down the item ;)
 
