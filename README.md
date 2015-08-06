@@ -56,7 +56,7 @@ It's possible that xCode find an error on this new line. Don't give up, just cle
 
 To instantiate a FBSideMenuViewController you have to call the init function :
 
-```
+```swift
 init(viewsControllers:[UIViewController], withImages images:[UIImage], forLimit limit:CGFloat, withMode mode:FBSideMenuMode)
 ```
 
