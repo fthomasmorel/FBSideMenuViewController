@@ -1,4 +1,8 @@
 # FBSideMenuViewController
+![swift](https://img.shields.io/badge/swift-2.0-orange.svg)
+![mit](https://img.shields.io/badge/licence-MIT-lightgrey.svg)
+![xcode](https://img.shields.io/badge/xcode-7.0-blue.svg)
+
 FBSideMenuViewController is a brand new way to interact with your side menu! The idea come from Benjamin Berger, you can find his work (and many others to his [Dribbble page](https://dribbble.com/benjaminberger))
 
 ![alternate text](https://d13yacurqjgara.cloudfront.net/users/374035/screenshots/1897399/navigation.gif)
