@@ -36,7 +36,7 @@ public class FBSideMenuViewController: UIViewController, FBMenuDelegate, UINavig
     public init(viewsControllers:[UIViewController], withImages images:[UIImage], forLimit limit:CGFloat, withMode mode:FBSideMenuMode){
         self.images = images
         self.viewControllers = viewsControllers
-        super.init(nibName: "FBSideMenuViewController", bundle: nil)
+        super.init(nibName: "FBSideMenuViewController", bundle: NSBundle(forClass: FBSideMenuViewController.self))
         self.navigationContainer = FBNavigationController(numberOfItem: min(images.count,viewControllers.count), withMaxLimit: limit, andMode: mode)
         self.navigationContainer.menuDelegate = self
         self.navigationContainer.delegate = self
@@ -60,7 +60,7 @@ public class FBSideMenuViewController: UIViewController, FBMenuDelegate, UINavig
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.registerNib(UINib(nibName: "FBTableViewCell", bundle: nil), forCellReuseIdentifier: kFBCellIdentifier)
+        self.tableView.registerNib(UINib(nibName: "FBTableViewCell", bundle: NSBundle(forClass: FBTableViewCell.self)), forCellReuseIdentifier: kFBCellIdentifier)
     }
     
     override public func didReceiveMemoryWarning() {

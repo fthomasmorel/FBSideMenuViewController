@@ -48,11 +48,11 @@ public class FBNavigationController:UINavigationController{
     public init(numberOfItem number:Int, withMaxLimit limit:CGFloat, andMode mode:FBSideMenuMode){
         self.currentIndex = 0
         self.numberOfItems = number
-        self.kLimit = CGFloat(Double(limit)*2.0/M_PI)
-        self.kMaxLimit = limit
+        self.kMaxLimit = max(120,limit)
+        self.kLimit = CGFloat(Double(self.kMaxLimit)*2.0/M_PI)
         self.step = (ceil(kLimit)-kWidthMenu+20)/CGFloat(numberOfItems)
         self.mode = mode
-        super.init(nibName: "FBNavigationController", bundle: nil)
+        super.init(nibName: "FBNavigationController", bundle: NSBundle(forClass: FBNavigationController.self))
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -71,11 +71,8 @@ public class FBNavigationController:UINavigationController{
     //MARK: - Private Functions
     
     private func computeIndex(){
-
-        print(self.view.frame.origin.x)
         let lastIndex = self.currentIndex
         let newIndex = Int(self.view.frame.origin.x < self.kWidthMenu-20 ? 0 : ((min(kMaxLimit-1,self.view.frame.origin.x) - (self.kWidthMenu-20))/self.step))
-        print(self.view.frame.origin.x < self.kWidthMenu-20 ? 0 : ((min(kMaxLimit-1,self.view.frame.origin.x) - (self.kWidthMenu-20))/self.step))
         if condition(lastIndex: lastIndex, newIndex: newIndex){
             self.savedIndex = 0
             self.currentIndex = newIndex

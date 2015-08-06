@@ -23,14 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         viewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vc2"))
         viewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vc3"))
         viewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vc1"))
-        viewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vc1"))
-        viewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vc2"))
-        viewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vc3"))
-        viewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vc1"))
-        viewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vc1"))
-        viewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vc2"))
-        viewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vc3"))
-        viewControllers.append(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vc1"))
         
         var images:[UIImage] = []
         images.append(UIImage(named: "home168")!)
@@ -38,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         images.append(UIImage(named: "compass49")!)
         images.append(UIImage(named: "group58")!)
         
-        let initialViewController = FBSideMenuViewController(viewsControllers: viewControllers, withImages: images, forLimit: 300, withMode: FBSideMenuMode.SwipeFromScratch)
+        let initialViewController = FBSideMenuViewController(viewsControllers: viewControllers, withImages: images, forLimit: 90, withMode: FBSideMenuMode.SwipeFromScratch)
         initialViewController.pictoAnimation = {(desactive:UIImageView?, active:UIImageView?, index:Int)-> Void in
             desactive?.alpha = 0.2
             desactive?.transform = CGAffineTransformMakeScale(0.8,0.8);
